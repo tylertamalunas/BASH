@@ -2,6 +2,41 @@
 
 # start of learning conditionals in BASH 
 
+
+echo "Welcome tarnished. Please choose your starting class:
+1 - Samurai
+2 - Prisoner
+3 - Prophet
+4 - Wretch"
+
+read class
+
+case $class in
+
+	1)
+		type="Samurai"
+		hp=10
+		attack=20
+		;;
+	2)
+		type="Prisoner"
+		hp=20
+		attack=4
+		;;
+	3)
+		type="Prophet"
+		hp=30
+		attack=4
+		;;
+	4)
+		type="Wretch"
+		hp=1
+		attack=1
+		;;
+esac
+echo "You have chosen $type. Your hp is $hp, your attack is $attack."
+
+
 echo "You Died"
 
 
@@ -15,7 +50,7 @@ echo "The first battle! Pick a number, 0 or 1 and attempt to beat your foe!"
 
 read tarnished
 
-if [[ $beast == $tarnished && $tarnished == 0 ]]; then
+if [[ $beast == $tarnished && 1 == 1 ]]; then
 	echo "Enemy vanquished! Nice job tarnished"
 else 
 	echo "You Died"
